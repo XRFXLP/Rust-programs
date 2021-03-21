@@ -1,3 +1,6 @@
+/*
+DFS implementation in undirected graph
+*/
 use std::collections::HashSet;
 
 fn path_finder( st : &str) -> bool {
