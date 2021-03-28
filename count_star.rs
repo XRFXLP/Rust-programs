@@ -1,5 +1,3 @@
-// This one looks really cool :P
-
 fn countStars(adj: Vec<Vec<bool>>) -> i32{
     let graph : Vec<Vec<u32>> = adj.iter()
                                    .map(|x| x.iter()
