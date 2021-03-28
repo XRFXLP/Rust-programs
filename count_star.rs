@@ -6,9 +6,12 @@ fn countStars(adj: Vec<Vec<bool>>) -> i32{
                                              .map(|(i, j)| i as u32)
                                              .collect())
                                    .collect();
-    graph.iter().enumerate()
-                .filter(|(i, j)| j.len() > 0 && j.iter().filter(|&&x| graph[x as usize].len() == 1).count() == j.len())
-                .map(|(i, x)| if x.len() == 1 { 0.5_f32 } else {1 as f32})
-                .sum::<f32>() as i32
+    graph.iter()
+         .enumerate()
+         .filter(|(i, j)| j.len() > 0 && j.iter()
+                                          .filter(|&&x| graph[x as usize].len() == 1)
+                                          .count() == j.len())
+         .map(|(i, x)| if x.len() == 1 { 0.5_f32 } else {1 as f32})
+         .sum::<f32>() as i32
 }
                   
