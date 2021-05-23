@@ -21,6 +21,7 @@ fn livingOnTheRoads(roadRegister: Vec<Vec<bool>>) -> Vec<Vec<bool>> {
         m.insert(j, i);
     }
 
+    //words?
 
     let mut adj : Vec<Vec<bool>> = (0..edges.len()).map(|_i| (0..edges.len()).map(|_j| false).collect::<Vec<bool>>()).collect::<Vec<Vec<bool>>>();
     for (i, j) in graph.iter().enumerate() {
